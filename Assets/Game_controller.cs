@@ -29,11 +29,12 @@ public class Game_controller : MonoBehaviour {
 	}
 
 	IEnumerator SpawnWaves(){
-		yield return new WaitForSeconds (startWait);
-		if (score > 50) {
-		}else if(){
-			
+		if (score == 0) {
+			yield return new WaitForSeconds (startWait);
+		} else {
+			yield return new WaitForSeconds (startWait);
 		}
+
 		while (true) {
 			for (int i = 0; i < hazardCount; i++) {
 				Vector3 spawnPosition = new Vector3 (Random.Range (-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);

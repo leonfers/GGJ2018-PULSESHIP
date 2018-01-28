@@ -16,19 +16,20 @@ public class pulse : MonoBehaviour {
 	void FixedUpdate () {
 		if (inflate) {
 			float expansion = Time.deltaTime * pulse_speed;
-			radar.transform.localScale += new Vector3 (0.1F * expansion, 1, 0.1F * expansion);
+			radar.transform.localScale += new Vector3 (0.1F * expansion,0.1F * expansion, 0.1F * expansion);
 			if (radar.transform.localScale.x > radius) {
 				inflate = false;
+			//radar.transform.localScale = new Vector3(1,1,1);
 			}
 		} else {
 			float expansion = Time.deltaTime * pulse_speed;
-			radar.transform.localScale += new Vector3 (0.1F / expansion, 1, 0.1F / expansion);
-			if (radar.transform.localScale.x < 1) {
+			radar.transform.localScale += new Vector3 (0.1F * (-expansion), 0.1F * (-expansion), 0.1F *(-expansion));
+			if (radar.transform.localScale.x < 10 ) {
 				inflate = true;
 			}
 		}
 
-		}
+	}
 		
 
 }
