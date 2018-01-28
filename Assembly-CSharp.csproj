@@ -55,6 +55,7 @@
      <Compile Include="Assets\create_enemy.cs" />
      <Compile Include="Assets\destroy_by_contact.cs" />
      <Compile Include="Assets\destroy_by_time.cs" />
+     <Compile Include="Assets\Fluxo.cs" />
      <Compile Include="Assets\Game_controller.cs" />
      <Compile Include="Assets\Health.cs" />
      <Compile Include="Assets\mover.cs" />
